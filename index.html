@@ -8,10 +8,15 @@
 </head>
 <body>
 
-<header> <h1>Prayer Times Lookup</h1></header>
+<header> <h1>Prayer Times Worldwide</h1></header>
    
 <div class="container">
-    <div class="location-display" id="locationDisplay"></div>
+    <div class="location-display" id="locationDisplay">Enter Your Location</div>
+    <div class="date-time" id="dateTime">
+        <p id="currentDate"></p>
+        <p id="currentTime"></p>
+    </div>
+    
     <form id="locationForm">
         <label for="city">City:</label>
         <input type="text" id="city" name="city" required>

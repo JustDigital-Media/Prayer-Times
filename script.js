@@ -3,7 +3,9 @@ document.getElementById('locationForm').addEventListener('submit', function(even
     const city = document.getElementById('city').value;
     const country = document.getElementById('country').value;
     const locationDisplay = document.getElementById('locationDisplay');
-    locationDisplay.textContent = `${city}, ${country}`;
+   
+    locationDisplay.textContent = `Prayer Times in ${city}, ${country}`;
+
 
     const url = `https://api.aladhan.com/v1/calendarByCity?city=${city}&country=${country}&method=2`;
     const prayerTimesDiv = document.getElementById('prayerTimes');

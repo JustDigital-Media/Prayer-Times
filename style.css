@@ -2,8 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #009432;
-    color: white;
+    background-color: white;;
+
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +14,7 @@ body {
 }
 
 h1 {
-    color: white;
+
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
@@ -40,7 +41,7 @@ header {
 }
 
 footer {
-    background-color: black;
+    background-color:#27ae60;
     height: 10vh; /* Adjust footer height */
     width: 100%;
     display: flex;
@@ -53,7 +54,7 @@ footer {
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    background: rgba(58, 58, 58, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
@@ -79,9 +80,10 @@ footer {
 }
 
 .location-display {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
     margin: 20px 0;
+    color:#27ae60
 }
 
 form {
@@ -90,4 +92,99 @@ form {
 
 label, input[type="text"] {
     margin-right: 10px;
+}
+
+input[type="text"], button {
+    padding: 10px;
+
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+input[type="text"] {
+    background-color: #fff;
+    color: #333;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+label {
+color:#000000;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    animation: fadeIn 1s ease-out;
+}
+
+
+.location-display{
+   text-transform: capitalize;
+   animation: fadeIn 2s ease-out;
+}
+
+.prayer-label {
+    font-weight: bold;
+
+}
+
+
+#prayerTimes p {
+    position: relative; /* Establishes a positioning context for pseudo-elements */
+    padding: 0 15px; /* Add horizontal padding */
+    margin: 10px 0; /* Add vertical space around each prayer time */
+    display: inline-block; /* Ensures the paragraphs line up horizontally */
+}
+
+#prayerTimes p:not(:last-child):after {
+    content: ''; /* Required for a pseudo-element */
+    position: absolute;
+    right: 0; /* Align with the right edge of the paragraph */
+    top: 10%; /* Starts the line a bit below the top of the container */
+    bottom: 10%; /* Ends the line above the bottom of the container */
+    width: 1px; /* Line thickness */
+    background-color: rgba(255, 255, 255, 0.5); /* Line color */
+}
+
+#prayerTimes p {
+    color: white; /* Set text color to white */
+    position: relative;
+    padding: 0 15px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+/* If you also want the vertical separator to be more visible against the dark background, you might consider changing its color: */
+#prayerTimes p:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.5); /* Lighter color for visibility */
 }

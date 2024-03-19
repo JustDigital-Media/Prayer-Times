@@ -200,6 +200,7 @@ header {
     font-size: 1.5em;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin: 0;
     overflow: hidden;
@@ -220,7 +221,7 @@ header::before {
     z-index: 0;
 }
 
-h1 {
+h1,h3 {
     position: relative;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
@@ -261,57 +262,4 @@ h1 {
 }
 
 
-@media (max-width: 768px) {
-    /* Adjust the header size */
-    header {
-        height: 25vh;
-        padding: 15px;
-        text-align: center;
-        flex-direction: column;
-    }
 
-    /* Resize and realign the location display and date/time */
-    .location-display {
-        font-size: 1.3em;
-        margin: 10px 0;
-    }
-
-    .date-time p {
-        font-size: 1em;
-        margin: 5px 0;
-    }
-
-    /* Adjust the form layout and spacing */
-    form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    label {
-        margin: 10px 0 5px 0;
-    }
-
-    input[type="text"], button {
-        width: 80%;  /* Make inputs and button take up more space */
-        margin: 5px;
-        font-size: 1em;
-    }
-
-    /* Adjust the prayer times layout */
-    #prayerTimes {
-        flex-direction: column;
-        padding: 15px;
-        margin: 10px;
-        gap: 10px;
-    }
-
-    #prayerTimes p {
-        font-size: 1em;  /* Adjust font size for better readability */
-    }
-
-    /* Footer adjustments */
-    footer {
-        padding: 10px;
-        font-size: 1em;
-    }
-}

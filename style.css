@@ -268,3 +268,75 @@ h1,h3 {
   padding: 15px; /* Additional padding for more space */
   margin: 10px 0; /* Space above and below */
 }
+
+
+
+/* Base styles go here, which you already have set up */
+
+/* Media Query for tablets and smaller screens */
+@media (max-width: 768px) {
+
+    label{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    button{
+        margin-top: 1em;
+    }
+    #locationForm{
+        display:flex;
+        flex-direction: column;
+    }
+    header {
+        height: 20vh; /* Smaller header for smaller screens */
+        font-size: 1em; /* Smaller font size */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Adjust the header font size */
+    }
+
+    .container {
+        height: auto; /* Flexibility in container height */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    #prayerTimes {
+        flex-direction: column; /* Stack prayer times vertically */
+        padding: 15px; /* More padding for touch targets */
+    }
+
+    .location-display, .date-time p, form label, input[type="text"], button {
+        font-size: 0.9em; /* Smaller font size for form elements */
+    }
+
+    footer {
+        height: 12vh; /* Slightly taller footer */
+        font-size: 0.8em; /* Smaller font size in the footer */
+    }
+}
+
+/* Media Query for mobile phones */
+@media (max-width: 480px) {
+    header {
+        height: 15vh; /* Even smaller header */
+    }
+
+    header h1 {
+        font-size: 1.2em; /* Even smaller header font size */
+    }
+
+    #prayerTimes {
+        flex-direction: column;
+        gap: 10px; /* Less gap for tighter layout */
+    }
+
+    .location-display, .date-time p, form label, input[type="text"], button {
+        font-size: 0.8em; /* Reduce the font size further */
+    }
+
+    footer {
+        height: 15vh; /* Adjust footer height for visibility */
+    }
+}
